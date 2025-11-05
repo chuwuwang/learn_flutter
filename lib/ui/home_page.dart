@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:learn_flutter/ui/basic_widget_page.dart';
+import 'package:learn_flutter/ui/basic_widget/basic_widget_page.dart';
 import 'package:learn_flutter/utils/color_utils.dart';
 
 class HomePage extends StatefulWidget {
