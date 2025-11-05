@@ -10,6 +10,7 @@ class ColorUtils {
 
   static const Color themeColor = Color(0XFFFF6600);
   static const Color accentColor = Color(0XFFFF4081);
+  static const Color backgroundFill = Color(0XFFF5F5F5);
 
   static const Color textMainColor = Color(0XFF333333);
   static const Color textContentColor = Color(0XFF666666);

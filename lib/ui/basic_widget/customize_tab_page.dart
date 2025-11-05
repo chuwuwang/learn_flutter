@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/customize/widget/customize_tab.dart';
 import 'package:learn_flutter/ui/base_state.dart';
+import 'package:learn_flutter/utils/color_utils.dart';
 
 class CustomizeTabPage extends StatefulWidget {
 
@@ -36,14 +37,15 @@ class _CustomizeTabPageState extends BaseState<CustomizeTabPage> {
   }
 
   Widget _buildCustomizeTab() {
+    var radius = Radius.circular(4);
     var customizeTab = CustomizeTab(
-      tabBarHeight: 64,
-      tabBarBackgroundColor: Colors.white10,
-      // tabBarPadding: const EdgeInsets.symmetric(horizontal: 20),
+      tabBarHeight: 56,
+      tabBarBackgroundColor: Colors.white,
       selectedColor: Colors.white,
       unselectedColor: Colors.black,
-      tabBarOptionPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      indicatorColor: Colors.orange,
+      tabBarBorderRadius: BorderRadiusGeometry.all(radius),
+      tabBarPadding: const EdgeInsets.symmetric(horizontal: 8),
+      tabBarOptionPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       position: _tabIndex,
       onChangeTabIndex: (index) {
         print('当前的索引为：$index');
@@ -60,13 +62,12 @@ class _CustomizeTabPageState extends BaseState<CustomizeTabPage> {
 
   Widget _buildContent(String text) {
     var child = Text(text);
-    return Container(padding: const EdgeInsets.all(16), color: Colors.white, child: child);
+    return Container(padding: const EdgeInsets.all(16), color: ColorUtils.backgroundFill, child: child);
   }
 
   Widget _buildTabItem(String text) {
     var style = const TextStyle(fontSize: 16);
-    var child = Text(text, style: style);
-    return Expanded(child: child);
+    return Text(text, style: style);
   }
 
   Widget _buildFooterTab() {
@@ -87,11 +88,8 @@ class _CustomizeTabPageState extends BaseState<CustomizeTabPage> {
       child: const Text('Bottom'),
     );
     var children = [topButton, leftButton, rightButton, bottomButton];
-    var row = Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: children,
-    );
-    return Container(height: 80, color: Colors.blueAccent, padding: const EdgeInsets.symmetric(horizontal: 16), child: row);
+    var row = Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: children);
+    return Container(height: 64, color: Colors.white, padding: const EdgeInsets.symmetric(horizontal: 16), child: row);
   }
 
 }
