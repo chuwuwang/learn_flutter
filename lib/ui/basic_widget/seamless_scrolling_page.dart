@@ -24,9 +24,9 @@ class _SeamlessScrollingPageState extends BaseState<SeamlessScrollingPage> {
     var child2 = _testChild(width: 300, height: 200, color: const Color(0xFF666666), text: '2');
     var child3 = _testChild(width: 300, height: 200, color: const Color(0xFF999999), text: '3');
     var children = [child1, child2, child3];
-    var seamlessScrolling1 = SeamlessScrolling(containerWidth: 300, containerHeight: 200, copyItemNumber: 1, children: children);
-    var seamlessScrolling2 = SeamlessScrolling(containerWidth: 400, containerHeight: 200, copyItemNumber: 2, milliseconds: 5000, children: children);
-    var seamlessScrolling3 = SeamlessScrolling(containerWidth: 200, containerHeight: 200, children: children);
+    var seamlessScrolling1 = CustomizeSeamlessScrolling(containerWidth: 300, containerHeight: 200, copyItemNumber: 1, children: children);
+    var seamlessScrolling2 = CustomizeSeamlessScrolling(containerWidth: 400, containerHeight: 200, copyItemNumber: 2, milliseconds: 5000, children: children);
+    var seamlessScrolling3 = CustomizeSeamlessScrolling(containerWidth: 200, containerHeight: 200, children: children);
     var cls = [seamlessScrolling1, const SizedBox(height: 20), seamlessScrolling2, const SizedBox(height: 20), seamlessScrolling3];
     var column = Column(children: cls);
     var container = Container(child: column);
