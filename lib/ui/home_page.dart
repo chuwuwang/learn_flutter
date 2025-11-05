@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/utils/ColorUtils.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learn_flutter/ui/basic_widget_page.dart';
+import 'package:learn_flutter/utils/color_utils.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -26,9 +28,10 @@ class _HomePageState extends State<HomePage>{
 
   _mainView(BuildContext context) {
     emptyAction() => {};
+    basicWidgetAction() => { context.push(BasicWidgetPage.routePath) };
     List<Widget> child1st = [
-      _tabItem("Basic View", ColorUtils.greenColor, emptyAction),
-      _tabItem("ReadCard", ColorUtils.blueColor, emptyAction),
+      _tabItem("Basic Widget", ColorUtils.greenColor, basicWidgetAction),
+      _tabItem("Devices Features", ColorUtils.blueColor, emptyAction),
     ];
     var row1st = Row(children: child1st);
     List<Widget> children = [row1st];
