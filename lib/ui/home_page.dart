@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:learn_flutter/feat/gps/location_service.dart';
 import 'package:learn_flutter/ui/basic_widget/basic_widget_page.dart';
 import 'package:learn_flutter/utils/color_utils.dart';
 
@@ -18,6 +19,9 @@ class _HomePageState extends State<HomePage>{
 
   @override
   Widget build(BuildContext context) {
+    onValue(position) { }
+    LocationService.getLocation().then(onValue);
+
     var style = const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold);
     var text = Text("Flutter Learn", style: style);
     var appBar = AppBar(title: text, backgroundColor: Colors.blue);
