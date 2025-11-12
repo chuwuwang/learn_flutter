@@ -33,12 +33,20 @@ class _HomePageState extends State<HomePage>{
   _mainView(BuildContext context) {
     emptyAction() => {};
     basicWidgetAction() => { context.push(BasicWidgetPage.routePath) };
+
     List<Widget> child1st = [
-      _tabItem("Basic Widget", ColorUtils.greenColor, basicWidgetAction),
-      _tabItem("Devices Features", ColorUtils.blueColor, emptyAction),
+      _tabItem("Basic Widget", ColorUtils.basicWidgetColor, basicWidgetAction),
+      _tabItem("Device Feature", ColorUtils.devicesFeaturesColor, emptyAction),
     ];
     var row1st = Row(children: child1st);
-    List<Widget> children = [row1st];
+
+    List<Widget> child2st = [
+      _tabItem("Animation", ColorUtils.animationColor, emptyAction),
+      _tabItem("Open Source", ColorUtils.openSourceColor, emptyAction),
+    ];
+    var row2st = Row(children: child2st);
+
+    List<Widget> children = [row1st, row2st];
     var column = Column(children: children);
     var container = Container(padding: const EdgeInsets.all(8), child: column);
     return SingleChildScrollView(child: container);

@@ -24,12 +24,16 @@ class _BasicWidgetPageState extends BaseState<BasicWidgetPage> {
   @override
   Widget onBuildWidget(BuildContext context) {
     emptyAction() => {};
-    customizeTabAction() => { context.push(CustomizeTabPage.routePath) };
-    seamlessScrollingPageAction() => { context.push(SeamlessScrollingPage.routePath) };
+    customizeTabAction() => { context.push(CustomizeTabPage.routePath)};
+    seamlessScrollingPageAction() => { context.push(SeamlessScrollingPage.routePath)};
+    compareSliderPageAction() => { context.push(SeamlessScrollingPage.routePath)};
+
     List<Widget> children = [
       KTXWidgetUtils.sampleItemView("Customize Tab", true, customizeTabAction),
       KTXWidgetUtils.sampleItemView("Seamless Scrolling", true, seamlessScrollingPageAction),
+      KTXWidgetUtils.sampleItemView("Compare Slider", true, compareSliderPageAction),
     ];
+
     var column = Column(children: children);
     var container = Container(child: column);
     return SingleChildScrollView(child: container);
