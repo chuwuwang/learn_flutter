@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_flutter/ui/base_state.dart';
+import 'package:learn_flutter/ui/basic_widget/compare_slider_page.dart';
 import 'package:learn_flutter/ui/basic_widget/customize_tab_page.dart';
 import 'package:learn_flutter/ui/basic_widget/seamless_scrolling_page.dart';
 import 'package:learn_flutter/utils/ktx_widget_utils.dart';
@@ -26,7 +27,7 @@ class _BasicWidgetPageState extends BaseState<BasicWidgetPage> {
     emptyAction() => {};
     customizeTabAction() => { context.push(CustomizeTabPage.routePath)};
     seamlessScrollingPageAction() => { context.push(SeamlessScrollingPage.routePath)};
-    compareSliderPageAction() => { context.push(SeamlessScrollingPage.routePath)};
+    compareSliderPageAction() => { context.push(CompareSliderPage.routePath)};
 
     List<Widget> children = [
       KTXWidgetUtils.sampleItemView("Customize Tab", true, customizeTabAction),
