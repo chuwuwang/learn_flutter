@@ -3,14 +3,14 @@ import 'package:flutter/cupertino.dart';
 class CustomizeSeamlessScrolling extends StatefulWidget {
 
   const CustomizeSeamlessScrolling(
-    {
-      super.key,
-      required this.containerWidth,
-      required this.containerHeight,
-      required this.children,
-      this.copyItemNumber,
-      this.milliseconds,
-    }
+      {
+          super.key,
+          required this.containerWidth,
+          required this.containerHeight,
+          required this.children,
+          this.copyItemNumber,
+          this.milliseconds,
+      }
   );
 
   /// 容器宽度

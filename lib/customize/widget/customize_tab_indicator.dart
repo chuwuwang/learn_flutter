@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class CustomizeTabIndicator extends Decoration {
 
   const CustomizeTabIndicator(
-    {
-      required this.color,
-      this.radius = BorderRadius.zero,
-    }
+      {
+          required this.color,
+          this.radius = BorderRadius.zero,
+      }
   );
 
   /// 指示器颜色

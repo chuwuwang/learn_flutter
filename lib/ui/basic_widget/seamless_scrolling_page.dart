@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_flutter/customize/widget/customize_seamless_scrolling.dart';
+import 'package:learn_flutter/customize/widget/seamless_scrolling.dart';
 import 'package:learn_flutter/ui/base_state.dart';
 
 class SeamlessScrollingPage extends StatefulWidget {

@@ -9,25 +9,26 @@ enum TabBarPosition { top, bottom, left, right }
 BorderRadius ctDefaultIndicatorBorderRadius = BorderRadius.circular(10);
 
 class CustomizeTab extends StatefulWidget {
+
   const CustomizeTab(
-    {
-      super.key,
-      this.tabBarHeight = kToolbarHeight,
-      this.tabBarBackgroundColor,
-      this.tabBarPadding = EdgeInsets.zero,
-      this.tabBarBorderRadius,
-      required this.tabs,
-      this.unselectedColor,
-      this.selectedColor,
-      this.tabBarOptionMargin = const EdgeInsets.only(right: 10),
-      this.tabBarOptionPadding = EdgeInsets.zero,
-      this.indicatorColor = Colors.blue,
-      this.indicatorBorderRadius,
-      required this.tabViews,
-      this.initialIndex,
-      this.onChangeTabIndex,
-      this.position = TabBarPosition.top,
-    }
+      {
+          super.key,
+          this.tabBarHeight = kToolbarHeight,
+          this.tabBarBackgroundColor,
+          this.tabBarPadding = EdgeInsets.zero,
+          this.tabBarBorderRadius,
+          required this.tabs,
+          this.unselectedColor,
+          this.selectedColor,
+          this.tabBarOptionMargin = const EdgeInsets.only(right: 10),
+          this.tabBarOptionPadding = EdgeInsets.zero,
+          this.indicatorColor = Colors.blue,
+          this.indicatorBorderRadius,
+          required this.tabViews,
+          this.initialIndex,
+          this.onChangeTabIndex,
+          this.position = TabBarPosition.top,
+      }
   );
 
   /// tab bar 容器的高度, 默认为 AppBar 工具栏组件的高度
