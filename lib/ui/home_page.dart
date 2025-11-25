@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_flutter/feat/gps/location_service.dart';
 import 'package:learn_flutter/ui/basic_widget/basic_widget_page.dart';
+import 'package:learn_flutter/ui/open_source/open_source_page.dart';
 import 'package:learn_flutter/utils/color_utils.dart';
 
 class HomePage extends StatefulWidget {
@@ -32,6 +33,7 @@ class _HomePageState extends State<HomePage>{
 
   _mainView(BuildContext context) {
     emptyAction() => {};
+    openSourceAction() => { context.push(OpenSourcePage.routePath) };
     basicWidgetAction() => { context.push(BasicWidgetPage.routePath) };
 
     List<Widget> child1st = [
@@ -42,7 +44,7 @@ class _HomePageState extends State<HomePage>{
 
     List<Widget> child2st = [
       _tabItem("Animation", ColorUtils.animationColor, emptyAction),
-      _tabItem("Open Source", ColorUtils.openSourceColor, emptyAction),
+      _tabItem("Open Source", ColorUtils.openSourceColor, openSourceAction),
     ];
     var row2st = Row(children: child2st);
 
