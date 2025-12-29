@@ -10,6 +10,7 @@ import 'package:learn_flutter/ui/open_source/convex_bottom_bar_mine_page.dart';
 import 'package:learn_flutter/ui/open_source/convex_bottom_bar_page.dart';
 import 'package:learn_flutter/ui/open_source/convex_bottom_bar_space_page.dart';
 import 'package:learn_flutter/ui/open_source/open_source_page.dart';
+import 'package:learn_flutter/ui/open_source/skeletonizer_page.dart';
 
 class AppRouterConfig {
 
@@ -32,6 +33,7 @@ class AppRouterConfig {
         StatefulShellBranch( routes: [ GoRoute(builder: (context, state) => const ConvexBottomBarMinePage(), path: ConvexBottomBarMinePage.routePath) ] ),
       ],
     ),
+    GoRoute(builder: (BuildContext context, GoRouterState state) => SkeletonizerPage(), path: SkeletonizerPage.routePath),
 
   ];
 

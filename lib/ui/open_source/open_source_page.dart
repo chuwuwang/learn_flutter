@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_flutter/ui/base_state.dart';
+import 'package:learn_flutter/ui/open_source/skeletonizer_page.dart';
 import 'package:learn_flutter/utils/ktx_widget_utils.dart';
 
 import 'convex_bottom_bar_home_page.dart';
@@ -24,10 +25,13 @@ class _OpenSourcePageState extends BaseState<OpenSourcePage> {
   @override
   Widget onBuildWidget(BuildContext context) {
     emptyAction() => {};
+
+    skeletonizerAction() => { context.push(SkeletonizerPage.routePath) };
     convexBottomBarAction() => { context.push(ConvexBottomBarHomePage.routePath) };
 
     List<Widget> children = [
       KTXWidgetUtils.sampleItemView("Convex BottomBar", true, convexBottomBarAction),
+      KTXWidgetUtils.sampleItemView("Skeletonizer 骨架屏", true, skeletonizerAction),
     ];
 
     var column = Column(children: children);
