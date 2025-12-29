@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:learn_flutter/app_router_config.dart';
+import 'package:learn_flutter/generated/l10n.dart';
 
 void main() {
   var app = const MyApp();
@@ -16,7 +18,15 @@ class MyApp extends StatelessWidget {
     var materialApp = MaterialApp.router(
       title: 'Flutter Learn',
       theme: ThemeData(colorScheme: colorScheme),
-      routerConfig: AppRouterConfig.router);
+      localizationsDelegates: const [
+        GlobalWidgetsLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        S.delegate
+      ],
+      supportedLocales: S.delegate.supportedLocales,
+      routerConfig: AppRouterConfig.router,
+    );
     return materialApp;
   }
 
