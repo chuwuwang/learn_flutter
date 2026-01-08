@@ -59,7 +59,7 @@ class _SkeletonizerPageState extends BaseState<SkeletonizerPage> {
       avatar, const SizedBox(height: 16),
       author, const SizedBox(height: 8),
       description, const SizedBox(height: 24),
-      expanded
+      expanded,
     ];
 
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: children);
