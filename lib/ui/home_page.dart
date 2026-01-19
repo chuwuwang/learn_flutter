@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:learn_flutter/feat/gps/location_service.dart';
 import 'package:learn_flutter/generated/l10n.dart';
+import 'package:learn_flutter/services/location_service.dart';
 import 'package:learn_flutter/ui/basic_widget/basic_widget_page.dart';
 import 'package:learn_flutter/ui/open_source/open_source_page.dart';
 import 'package:learn_flutter/utils/color_utils.dart';
