@@ -14,8 +14,8 @@ class ConvexBottomBarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var style = const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold);
     var text = Text("Convex BottomBar", style: style);
-    var iconThemeData = const IconThemeData(color: Colors.white);
 
+    var iconThemeData = const IconThemeData(color: Colors.white);
     var appBar = AppBar(title: text, iconTheme: iconThemeData, backgroundColor: Colors.blue);
 
     var items = const [
