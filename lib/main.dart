@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:learn_flutter/app_router_config.dart';
 import 'package:learn_flutter/generated/l10n.dart';
 
 void main() {
-  var app = const MyApp();
+  var myApp = MyApp();
+  var app = GetMaterialApp(home: myApp);
   runApp(app);
 }
 
