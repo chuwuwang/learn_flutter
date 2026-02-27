@@ -39,7 +39,14 @@ class GetXExample1 extends StatelessWidget {
     );
     var center = Center(child: child);
 
-    return Scaffold(appBar: appBar, body: center, floatingActionButton: floatingActionButton);
+    var scaffold = Scaffold(appBar: appBar, body: center, floatingActionButton: floatingActionButton);
+
+    onPopInvokedWithResult(didPop, result) {
+      debugPrint("onPopInvokedWithResult, didPop: $didPop, result: $result");
+      if (didPop) return;
+      Navigator.of(context).pop();
+    }
+    return PopScope(canPop: false, onPopInvokedWithResult: onPopInvokedWithResult, child: scaffold);
   }
 
 }
