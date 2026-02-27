@@ -9,6 +9,7 @@ import 'package:learn_flutter/ui/open_source/convex_bottom_bar_home_page.dart';
 import 'package:learn_flutter/ui/open_source/convex_bottom_bar_mine_page.dart';
 import 'package:learn_flutter/ui/open_source/convex_bottom_bar_page.dart';
 import 'package:learn_flutter/ui/open_source/convex_bottom_bar_space_page.dart';
+import 'package:learn_flutter/ui/open_source/get_x_example1_page.dart';
 import 'package:learn_flutter/ui/open_source/open_source_page.dart';
 import 'package:learn_flutter/ui/open_source/skeletonizer_page.dart';
 import 'package:learn_flutter/ui/open_source/tutorial_coach_mark_page.dart';
@@ -36,6 +37,7 @@ class AppRouterConfig {
     ),
     GoRoute(builder: (BuildContext context, GoRouterState state) => SkeletonizerPage(), path: SkeletonizerPage.routePath),
     GoRoute(builder: (BuildContext context, GoRouterState state) => TutorialCoachMarkPage(), path: TutorialCoachMarkPage.routePath),
+    GoRoute(builder: (BuildContext context, GoRouterState state) => GetXExample1(), path: GetXExample1.routePath),
 
   ];
 

@@ -14,11 +14,13 @@ class CounterController extends GetxController {
 
 }
 
-class GetX1 extends StatelessWidget {
+class GetXExample1 extends StatelessWidget {
+
+  static final String routePath = '/open-source/get-x-example1';
 
   final controller = Get.put( CounterController() );
 
-  GetX1( { super.key } );
+  GetXExample1( { super.key } );
 
   @override
   Widget build(BuildContext context) {

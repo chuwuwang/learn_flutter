@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_flutter/ui/base_state.dart';
+import 'package:learn_flutter/ui/open_source/get_x_example1_page.dart';
 import 'package:learn_flutter/ui/open_source/skeletonizer_page.dart';
 import 'package:learn_flutter/ui/open_source/tutorial_coach_mark_page.dart';
 import 'package:learn_flutter/utils/ktx_widget_utils.dart';
@@ -27,6 +28,7 @@ class _OpenSourcePageState extends BaseState<OpenSourcePage> {
   Widget onBuildWidget(BuildContext context) {
     emptyAction() => {};
 
+    getXExample1Action() => { context.push(GetXExample1.routePath) };
     skeletonizerAction() => { context.push(SkeletonizerPage.routePath) };
     convexBottomBarAction() => { context.push(ConvexBottomBarHomePage.routePath) };
     tutorialCoachMarkAction() => { context.push(TutorialCoachMarkPage.routePath) };
@@ -35,6 +37,7 @@ class _OpenSourcePageState extends BaseState<OpenSourcePage> {
       KTXWidgetUtils.sampleItemView("Convex BottomBar", true, convexBottomBarAction),
       KTXWidgetUtils.sampleItemView("Skeletonizer 骨架屏", true, skeletonizerAction),
       KTXWidgetUtils.sampleItemView("Tutorial Coach Mark", true, tutorialCoachMarkAction),
+      KTXWidgetUtils.sampleItemView("GetX Example1", true, getXExample1Action),
     ];
 
     var column = Column(children: children);
