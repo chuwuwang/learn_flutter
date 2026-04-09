@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:learn_flutter/ui/animation/basic_animation_page.dart';
+import 'package:learn_flutter/ui/animation/login/login_page.dart';
 import 'package:learn_flutter/ui/basic_widget/basic_widget_page.dart';
 import 'package:learn_flutter/ui/basic_widget/compare_slider_page.dart';
 import 'package:learn_flutter/ui/basic_widget/customize_tab_page.dart';
@@ -23,6 +25,9 @@ class AppRouterConfig {
     GoRoute(builder: (BuildContext context, GoRouterState state) => CustomizeTabPage(), path: CustomizeTabPage.routePath),
     GoRoute(builder: (BuildContext context, GoRouterState state) => SeamlessScrollingPage(), path: SeamlessScrollingPage.routePath),
     GoRoute(builder: (BuildContext context, GoRouterState state) => CompareSliderPage(), path: CompareSliderPage.routePath),
+
+    GoRoute(builder: (BuildContext context, GoRouterState state) => BasicAnimationPage(), path: BasicAnimationPage.routePath),
+    GoRoute(builder: (BuildContext context, GoRouterState state) => LoginPage(), path: LoginPage.routePath),
 
     GoRoute(builder: (BuildContext context, GoRouterState state) => OpenSourcePage(), path: OpenSourcePage.routePath),
     StatefulShellRoute.indexedStack(

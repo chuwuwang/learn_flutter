@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:learn_flutter/generated/l10n.dart';
 import 'package:learn_flutter/services/location_service.dart';
+import 'package:learn_flutter/ui/animation/basic_animation_page.dart';
 import 'package:learn_flutter/ui/basic_widget/basic_widget_page.dart';
 import 'package:learn_flutter/ui/open_source/open_source_page.dart';
 import 'package:learn_flutter/utils/color_utils.dart';
@@ -36,6 +37,7 @@ class _HomePageState extends State<HomePage>{
     emptyAction() => {};
     openSourceAction() => { context.push(OpenSourcePage.routePath) };
     basicWidgetAction() => { context.push(BasicWidgetPage.routePath) };
+    basicAnimationAction() => { context.push(BasicAnimationPage.routePath) };
 
     var animationString = S.of(context).home_tab_animation;
     var openSourceString = S.of(context).home_tab_open_source;
@@ -49,7 +51,7 @@ class _HomePageState extends State<HomePage>{
     var row1st = Row(children: child1st);
 
     List<Widget> child2st = [
-      _tabItem(animationString, ColorUtils.animationColor, emptyAction),
+      _tabItem(animationString, ColorUtils.animationColor, basicAnimationAction),
       _tabItem(openSourceString, ColorUtils.openSourceColor, openSourceAction),
     ];
     var row2st = Row(children: child2st);

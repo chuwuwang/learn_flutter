@@ -26,8 +26,7 @@ class _OpenSourcePageState extends BaseState<OpenSourcePage> {
 
   @override
   Widget onBuildWidget(BuildContext context) {
-    emptyAction() => {};
-
+    emptyAction() => { };
     getXExample1Action() => { context.push(GetXExample1.routePath) };
     skeletonizerAction() => { context.push(SkeletonizerPage.routePath) };
     convexBottomBarAction() => { context.push(ConvexBottomBarHomePage.routePath) };

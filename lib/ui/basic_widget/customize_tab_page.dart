@@ -7,7 +7,7 @@ class CustomizeTabPage extends StatefulWidget {
 
   static final String routePath = '/basic-widget/customize-tab';
 
-  const CustomizeTabPage({super.key});
+  const CustomizeTabPage( { super.key } );
 
   @override
   State<CustomizeTabPage> createState() => _CustomizeTabPageState();
