@@ -8,22 +8,18 @@ class DeviceService {
   static final DeviceInfoPlugin _plugin = DeviceInfoPlugin();
 
   /// fetch device information based on the current platform
-  static Future<Map<String, dynamic>> getDeviceInfo() async {
+  static Future< Map<String, dynamic> > getDeviceInfo() async {
+    var error = '';
+    var platform = 'unknown';
     try {
-      if (PlatformUtils.isAndroid) {
-        return await _getAndroidInfo();
-      }
-      if (PlatformUtils.isIOS) {
-        return await _getIosInfo();
-      }
-      if (PlatformUtils.isWeb) {
-        return await _getWebInfo();
-      }
-      return {'platform': 'unknown'};
+      if (PlatformUtils.isAndroid) return await _getAndroidInfo();
+      if (PlatformUtils.isIOS) return await _getIosInfo();
+      if (PlatformUtils.isWeb) return await _getWebInfo();
     } catch (e) {
-      var msg = e.toString();
-      return {'platform': 'error', 'error': msg};
+      platform = 'error';
+      error = e.toString();
     }
+    return {'platform': platform, 'error': error};
   }
 
   static Future< Map<String, dynamic> > _getWebInfo() async {

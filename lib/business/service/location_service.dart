@@ -1,3 +1,4 @@
+// ignore_for_file: avoid_print
 import 'dart:async';
 
 import 'package:geolocator/geolocator.dart';
@@ -20,9 +21,7 @@ class LocationService {
     if (permission == LocationPermission.denied) {
       // 如果权限被拒绝, 请求权限
       permission = await Geolocator.requestPermission();
-      if (permission == LocationPermission.denied) {
-        return Future.error('Location permissions are denied');
-      }
+      if (permission == LocationPermission.denied) return Future.error('Location permissions are denied');
     }
 
     // 如果权限被永久拒绝, 抛出错误
